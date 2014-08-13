@@ -1,0 +1,18 @@
+<div <?php if($this->cssID): echo $this->cssID; endif; ?>class="<?php echo $this->class; ?> ce_contentmemory">
+	<div class="ce_cmvorn">
+		<div class="inside">
+			<?php if($this->headline): ?>
+			<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl ?>>
+			<?php endif; ?>
+			<?php echo $this->textvorn; ?>
+		</div>
+	</div>
+	<div class="ce_cmhint">
+		<div class="inside">
+			<?php if($this->cmheadline): ?>
+			<<?php echo $this->cmhl; ?>><?php echo $this->cmheadline; ?></<?php echo $this->cmhl ?>>
+			<?php endif; ?>
+			<?php echo $this->texthint; ?>
+		</div>
+	</div>
+</div>

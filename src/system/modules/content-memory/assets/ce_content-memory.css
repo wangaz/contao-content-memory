@@ -1,0 +1,74 @@
+.ce_contentmemory {
+	width: 180px;
+	height: 220px;
+	padding-bottom: 2px;
+	margin: 5px 15px 20px;
+	float: left;
+	position: relative;
+	z-index: 200;
+}
+/* Memorykarte: allgemeine Eigenschaften */
+
+.ce_cmvorn {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	z-index: 100;
+	overflow: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transition: 1.5s;
+	-webkit-transition: 1.5s;
+	transition: 1.5s;
+}
+/* Memorykarte: Vorderseite */
+
+.ce_cmhint {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	top: -100%;
+	margin-top: -2px;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	z-index: 1;
+	overflow: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transition: 1.5s;
+	-webkit-transition: 1.5s;
+	transition: 1.5s;
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+/* Memorykarte: Rückseite */
+
+.ce_contentmemory:hover .ce_cmvorn,
+.ce_cmvorn:hover,
+.ce_contentmemory:focus .ce_cmvorn,
+.ce_cmvorn:focus {
+	z-index: 1;
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+/* Vorderseite nach hinten */
+
+.ce_contentmemory:hover .ce_cmhint {
+	z-index: 100;
+	-moz-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+/* Rückseite nach vorn */
