@@ -65,7 +65,8 @@
 }
 /* Vorderseite nach hinten */
 
-.ce_contentmemory:hover .ce_cmhint {
+.ce_contentmemory:hover .ce_cmhint,
+.ce_contentmemory:focus .ce_cmvorn {
 	z-index: 100;
 	-moz-transform: rotateY(0deg);
 	-webkit-transform: rotateY(0deg);

@@ -1,6 +1,6 @@
 
-<div <?php if($this->cssID): echo $this->cssID; endif; ?>class="<?php echo $this->class; ?> ce_contentmemory">
-	<div class="ce_cmvorn">
+<div <?php if($this->cssID): echo $this->cssID; endif; ?>class="<?php echo $this->class; ?> ce_contentmemory" onclick="">
+	<div class="ce_cmvorn" onclick="">
 		<div class="inside">
 			<?php if($this->headline): ?>
 			<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl ?>>
@@ -34,12 +34,38 @@
 			<?php endif; ?>
 		</div>
 	</div>
-	<div class="ce_cmhint">
+	<div class="ce_cmhint" onclick="">
 		<div class="inside">
 			<?php if($this->cmheadline): ?>
 			<<?php echo $this->cmhl; ?>><?php echo $this->cmheadline; ?></<?php echo $this->cmhl ?>>
 			<?php endif; ?>
-			<?php echo $this->texthint; ?>
+			<?php if (!$this->cmAddBefore): ?>
+				<?php echo $this->texthint; ?>
+			<?php endif; ?>
+			
+			<?php if ($this->cmAddImage): ?>
+			<figure class="image_container<?php echo $this->cmFloatClass; ?>"<?php if ($this->cmMargin): ?> style="<?php echo $this->cmMargin; ?>"<?php endif; ?>>
+			
+				<?php if ($this->cmHref): ?>
+				<a href="<?php echo $this->cmHref; ?>"<?php if ($this->cmLinkTitle): ?> title="<?php echo $this->cmLinkTitle; ?>"<?php endif; ?><?php echo $this->cmAttributes; ?>>
+				<?php endif; ?>
+			
+					<img src="<?php echo $this->cmSrc; ?>"<?php echo $this->cmImgSize; ?> alt="<?php echo $this->cmAlt; ?>"<?php if ($this->cmTitle): ?> title="<?php echo $this->cmTitle; ?>"<?php endif; ?>>
+			
+				<?php if ($this->cmHref): ?>
+				</a>
+				<?php endif; ?>
+			
+				<?php if ($this->cmCaption): ?>
+				<figcaption class="caption" style="width:<?php echo $this->cmArrSize[0]; ?>px"><?php echo $this->cmCaption; ?></figcaption>
+				<?php endif; ?>
+			
+			</figure>
+			<?php endif; ?>
+			
+			<?php if ($this->cmAddBefore): ?>
+				<?php echo $this->texthint; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>

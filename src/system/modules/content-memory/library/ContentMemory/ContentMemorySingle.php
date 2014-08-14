@@ -62,7 +62,7 @@ class ContentMemorySingle extends \ContentElement
 		// Im Frontend-Modus
 	
 		// CSS einbinden
-		$GLOBALS['TL_CSS'][] = 'system/modules/contentmemory/assets/ce_wgz_cm.css';
+		$GLOBALS['TL_CSS'][] = 'system/modules/content-memory/assets/ce_content-memory.css';
 
 		$this->Template->headline = $this->headline;
 		$this->Template->hl = $this->hl;
@@ -74,7 +74,8 @@ class ContentMemorySingle extends \ContentElement
 		$this->Template->cmhl = $this->cm_hl;
 		$this->Template->texthint = $this->cmText;
 		
-		$this->Template->addImgae = false;
+		//$this->Template->addImage = false;
+		//$this->Template->cmAddImage = false;
 		
 		// add an image to the front side
 		if($this->addImage && $this->singleSRC != '')
@@ -83,11 +84,27 @@ class ContentMemorySingle extends \ContentElement
 
 			if ($objModel === null) {
 				if (!\Validator::isUuid($this->singleSRC))
-					$this->Template->text = '<p class="error">' . $GLOBALS['TL_LANG']['ERR']['version2format'] . '</p>';
+					$this->Template->textvorn = '<p class="error">' . $GLOBALS['TL_LANG']['ERR']['version2format'] . '</p>';
 			}
 			elseif (is_file(TL_ROOT . '/' . $objModel->path))
 			{
 				$this->singleSRC = $objModel->path;
+				$this->addImageToTemplate($this->Template, $this->arrData);
+			}
+		}
+		
+		// add an image to the back side
+		if($this->cmAddImage && $this->cmSingleSRC != '')
+		{
+			$objModel = \FilesModel::findByUuid($this->cmSingleSRC);
+
+			if ($objModel === null) {
+				if (!\Validator::isUuid($this->cmSingleSRC))
+					$this->Template->texthint = '<p class="error">' . $GLOBALS['TL_LANG']['ERR']['version2format'] . '</p>';
+			}
+			elseif (is_file(TL_ROOT . '/' . $objModel->path))
+			{
+				$this->cmSingleSRC = $objModel->path;
 				$this->addImageToTemplate($this->Template, $this->arrData);
 			}
 		}
