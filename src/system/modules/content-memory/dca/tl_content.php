@@ -15,10 +15,10 @@
  */
 array_insert($GLOBALS['TL_DCA']['tl_content']['palettes'], 0, array
 (
-	'contentmemorySingle'			=> '{type_legend},type;{cmfront_legend},headline,text,addImage;{cmback_legend},cmHeadline,cmText;{protected_legend:hide},protected;{expert_legend:hide},cssID,space',
-	'contentmemoryFront'			=> '{type_legend},type;{protected_legend:hide},protected;{expert_legend:hide},cssID',
-	'contentmemoryBack'				=> '{type_legend},type;{protected_legend:hide},protected;',
-	'contentmemoryFin'				=> '{type_legend},type;{protected_legend:hide},protected;'
+	'contentmemorySingle'			=> '{type_legend},type;{cmfront_legend},headline,text,addImage;{cmback_legend},cmHeadline,cmText;{protected_legend:hide},protected;{expert_legend:hide},cssID,space;{invisible_legend:hide},invisible,start,stop',
+	'contentmemoryFront'			=> '{type_legend},type;{protected_legend:hide},protected;{expert_legend:hide},cssID;{invisible_legend:hide},invisible,start,stop',
+	'contentmemoryBack'				=> '{type_legend},type;{protected_legend:hide},protected;{invisible_legend:hide},invisible,start,stop',
+	'contentmemoryFin'				=> '{type_legend},type;{protected_legend:hide},protected;{invisible_legend:hide},invisible,start,stop'
 ));
 
 /**
