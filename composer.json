@@ -1,0 +1,33 @@
+{
+	"name":"wangaz/contao-content-memory",
+	"description":"A memory-like content element for the frontend",
+	"keywords":["contao", "content", "memory"],
+	"type":"contao-module",
+	"homepage":"http://www.wangaz.com",
+	"license":"CC-BY-SA 4.0",
+	"authors":[
+		{
+			"name":"Wangaz.",
+			"homepage":"http://www.wangaz.com"
+		}
+	],
+	"support":{
+		"issues":"https://github.com/wangaz/contao-memory/issues",
+		"source":"https://github.com/wangaz/contao-memory"
+	},
+	"require":{
+		"php":">=5.3",
+		"contao/core":"~3.0",
+		"contao-community-alliance/composer-installer":"*"
+	},
+	"autoload": {
+		"classmap": ["src"]
+	},
+	"extra":{
+		"contao": {
+			"symlinks":{
+				"src/system/modules/content-memory":"system/modules/coneten-memory"
+			}
+		}
+	}
+}
