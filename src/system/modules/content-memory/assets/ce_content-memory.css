@@ -5,7 +5,7 @@
 	margin: 5px 15px 20px;
 	float: left;
 	position: relative;
-	z-index: 200;
+	z-index: 3;
 }
 /* Memorykarte: allgemeine Eigenschaften */
 
@@ -15,7 +15,7 @@
 	position: relative;
 	background-color: #FFFFFF;
 	border: 1px solid #000000;
-	z-index: 100;
+	z-index: 2;
 	overflow: hidden;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
@@ -67,7 +67,7 @@
 
 .ce_contentmemory:hover .ce_cmhint,
 .ce_contentmemory:focus .ce_cmvorn {
-	z-index: 100;
+	z-index: 2;
 	-moz-transform: rotateY(0deg);
 	-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
