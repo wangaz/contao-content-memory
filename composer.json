@@ -12,8 +12,8 @@
 		}
 	],
 	"support":{
-		"issues":"https://github.com/wangaz/contao-memory/issues",
-		"source":"https://github.com/wangaz/contao-memory"
+		"issues":"https://github.com/wangaz/contao-content-memory/issues",
+		"source":"https://github.com/wangaz/contao-content-memory"
 	},
 	"require":{
 		"php":">=5.3",

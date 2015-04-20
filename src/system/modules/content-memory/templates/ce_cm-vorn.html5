@@ -1,0 +1,3 @@
+<div <?php if($this->cssID): echo $this->cssID; endif; ?>class="<?php echo $this->class; ?> ce_contentmemory" onclick="">
+	<div class="ce_cmvorn" onclick="">
+		<div class="inside">
